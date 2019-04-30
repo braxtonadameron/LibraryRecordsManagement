@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-library-card',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./library-card.component.css']
 })
 export class LibraryCardComponent implements OnInit {
+  cardForm = this.fb.group({
 
-  constructor() { }
+  });
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
   }

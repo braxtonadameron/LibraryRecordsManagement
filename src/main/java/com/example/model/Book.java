@@ -8,6 +8,10 @@ public class Book {
     private String publisher;
     private String isbn;
     private Date published;
+    
+    public Book() {
+    	
+    }
 
     public Book(String title) {
         this.title = title;
