@@ -1,0 +1,16 @@
+.navContent {
+  display: flex !important;
+  flex-basis: auto;
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+}
+
+fa-icon {
+  font-size: 2em;
+  color: white;
+}
+
+.profile {
+  margin-left: 20px;
+}

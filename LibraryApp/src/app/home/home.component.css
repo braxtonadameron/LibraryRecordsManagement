@@ -1,0 +1,59 @@
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "welcome"
+      "general"
+      "manage-books"
+      "administrator-options";
+  }
+
+@media only screen and (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "welcome welcome welcome"
+      "general manage-books administrator-options";
+  }
+}
+
+.welcome {
+  text-align: center;
+  grid-area: welcome;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.general {
+  margin: auto;
+  grid-area: general;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.manage-books {
+  margin: auto;
+  grid-area: manage-books;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.administrator-options {
+  margin: auto;
+  grid-area: administrator-options;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+h6 {
+  text-align: left;
+  background-color: #3F51B5;
+  color: white;
+}
+
+button {
+  width: 130px;
+}
