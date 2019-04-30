@@ -1,0 +1,23 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/">Dashboard</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Search Books</li>
+  </ol>
+</nav>
+
+<form class="container" [formGroup]="searchForm">
+  <input type="search" placeholder="Book Title" formControlName="title">
+  <button (click)="search()" type="submit" [disabled]="!searchForm.valid">Search</button>
+</form>
+
+<div class="container">
+  <div *ngFor="let book of books" class="card text-center general" style="width: 18rem;">
+    <h6 class="card-header">{{ book.title }}</h6>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Author: {{ book.author }}</li>
+      <li class="list-group-item">Publisher: {{ book.publisher }}</li>
+      <li class="list-group-item">ISBN: {{ book.isbn }}</li>
+      <li class="list-group-item">Published: {{ book.published }}</li>
+    </ul>
+  </div>
+</div>

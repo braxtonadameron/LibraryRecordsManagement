@@ -275,6 +275,9 @@ MIT
 @angular/router
 MIT
 
+@angular/forms
+MIT
+
 @fortawesome/fontawesome-svg-core
 MIT
 Font Awesome Free License

@@ -1,0 +1,25 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/">Dashboard</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Add Book</li>
+  </ol>
+</nav>
+
+<form class="container" [formGroup]="bookForm">
+  <div class="form-group">
+    <input class="form-control" placeholder="Book Title" formControlName="title">
+  </div>
+  <div class="form-group">
+    <input class="form-control" placeholder="Author" formControlName="author">
+  </div>
+  <div class="form-group">
+    <input class="form-control" placeholder="Publisher" formControlName="publisher">
+  </div>
+  <div class="form-group">
+    <input class="form-control" placeholder="ISBN" formControlName="isbn">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="date" placeholder="Published" formControlName="published">
+  </div>
+  <button (click)="add()" type="submit" [disabled]="!bookForm.valid">Add Book</button>
+</form>
