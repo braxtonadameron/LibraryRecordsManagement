@@ -6,8 +6,7 @@ public class Library {
     private static ArrayList<Book> books;
     private static ArrayList<Employee> employees;
 
-    public Library() {
-    }
+    public Library() { }
 
     public Library(ArrayList<Book> books, ArrayList<Employee> employees) {
         Library.books = books;

@@ -4,16 +4,29 @@
     <span class="navbar-toggler-icon"></span>
   </button> -->
 
-  <div class="navContent" id="navbarSupportedContent">
+  <form class="navContent" id="navbarSupportedContent" [formGroup]="loginForm" *ngIf="!loggedIn">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <fa-icon [icon]="faQuestionCircle"></fa-icon>
       </li>
     </ul>
     <div class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Username" aria-label="Username">
-      <input class="form-control mr-sm-2" type="search" placeholder="Password" aria-label="Password">
-      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Login</button>
+      <input formControlName="username" class="form-control mr-sm-2" type="search" placeholder="Username" aria-label="Username">
+      <input formControlName="password" class="form-control mr-sm-2" type="search" placeholder="Password" aria-label="Password">
+      <button (click)="login()" class="btn btn-secondary my-2 my-sm-0" type="submit">Login</button>
+    </div>
+    <fa-icon class="profile" [icon]="faUserCircle"></fa-icon>
+  </form>
+
+  <div class="navContent" id="navbarSupportedContent" *ngIf="loggedIn">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <fa-icon [icon]="faQuestionCircle"></fa-icon>
+      </li>
+    </ul>
+    <div class="form-inline my-2 my-lg-0">
+      <h5>Hello, {{ username }}!</h5>
+      <button (click)="logout()" class="btn btn-secondary my-2 my-sm-0" type="submit">Logout</button>
     </div>
     <fa-icon class="profile" [icon]="faUserCircle"></fa-icon>
   </div>
